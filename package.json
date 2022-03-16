@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-define-read-only-accessor",
-  "version": "0.0.8",
+  "version": "0.0.0",
   "description": "Define a read-only accessor.",
   "license": "Apache-2.0",
   "author": {

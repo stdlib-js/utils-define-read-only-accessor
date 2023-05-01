@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,21 +16,29 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var defineProperty = require( '@stdlib/utils-define-property' );
+import { PropertyName } from '@stdlib/types/object';
 
-
-// MAIN //
+/**
+* Getter function.
+*
+* @returns property value
+*/
+type Getter = () => any;
 
 /**
 * Defines a read-only accessor.
 *
-* @param {Object} obj - object on which to define the property
-* @param {(string|symbol)} prop - property name
-* @param {Function} getter - accessor
+* ## Notes
+*
+* -   Read-only accessors are enumerable and non-configurable.
+*
+* @param obj - object on which to define the property
+* @param prop - property name
+* @param getter - accessor
 *
 * @example
 * function getter() {
@@ -47,15 +55,9 @@ var defineProperty = require( '@stdlib/utils-define-property' );
 *     console.error( err.message );
 * }
 */
-function setReadOnlyAccessor( obj, prop, getter ) {
-	defineProperty( obj, prop, {
-		'configurable': false,
-		'enumerable': true,
-		'get': getter
-	});
-}
+declare function setReadOnlyAccessor( obj: any, prop: PropertyName, getter: Getter ): void; // tslint:disable-line: max-line-length
 
 
 // EXPORTS //
 
-module.exports = setReadOnlyAccessor;
+export = setReadOnlyAccessor;

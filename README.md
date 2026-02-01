@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import setReadOnlyAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-read-only-accessor@esm/index.mjs';
+import setReadOnlyAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-read-only-accessor@v0.2.3-esm/index.mjs';
 ```
 
 #### setReadOnlyAccessor( obj, prop, getter )
@@ -90,7 +90,7 @@ obj.foo = 'boop';
 <body>
 <script type="module">
 
-import setReadOnlyAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-read-only-accessor@esm/index.mjs';
+import setReadOnlyAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-read-only-accessor@v0.2.3-esm/index.mjs';
 
 function Foo( name ) {
     if ( !(this instanceof Foo) ) {
